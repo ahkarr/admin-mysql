@@ -19,4 +19,5 @@ VALUES
     
 -- MAKE TRANSACTION
    
-DELETE FROM contacts 
+DELETE FROM contacts ;
+
