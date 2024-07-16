@@ -1,0 +1,36 @@
+################# BACKUP DATABASE ######################
+-- dump single database
+
+mysqldump -u root -p -B classicmodels > db_dump.sql
+
+-- dump all database
+
+mysqldump -u root -p -A > all_db_dump.sql
+
+-- dump single table
+mysqldum -u root -p classicmodel customers > customers.sql
+
+-- dump data strucutre
+mysqldum -u root -d classicmodel > customers.sql
+
+-- dump data
+mysqldum -u root -t classicmodel  > customers.sql
+
+
+################# RESTORE DATABASE #####################
+
+sysadmin@uat-coreapp:~$ mysql -u root -p hr < hr_dump.sql 
+Enter password: 
+sysadmin@uat-coreapp:~$ 
+
+################# BACKUP SINGLE TABLE #####################
+sysadmin@uat-coreapp:~$ mysqldump -u root -p sales customers > dump-mysql/dbSale-tbCustomer.sql
+Enter password: 
+sysadmin@uat-coreapp:~$ ls
+
+################# BACKUP MULTIPLE TABLE #####################
+sysadmin@uat-coreapp:~$ mysqldump -u root -p sales customers orders > dump-mysql/dbSale-SomeTable.sql
+Enter password: 
+sysadmin@uat-coreapp:~$ ls
+
+
